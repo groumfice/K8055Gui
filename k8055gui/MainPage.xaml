@@ -5,50 +5,50 @@
     xmlns:local="using:k8055gui"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d" Height="480" Width="800">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button x:Name="btWriteAllDigital" Content="+All" HorizontalAlignment="Left" Margin="477,108,0,0" VerticalAlignment="Top" FontSize="10" Height="24" IsEnabled="False"/>
-        <Button x:Name="btClearAllDigital" Content="-All" HorizontalAlignment="Left" Margin="527,108,0,0" VerticalAlignment="Top" Height="24" FontSize="10" IsEnabled="False"/>
-        <Button x:Name="btconnect" Content="Connect" HorizontalAlignment="Left" Margin="26,26,0,0" VerticalAlignment="Top" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False"/>
-        <Button x:Name="btInput5" HorizontalAlignment="Left" Margin="26,318,0,0" VerticalAlignment="Top" Width="24" Height="24" Background="Gray" Content="5" FontSize="10"/>
-        <Button x:Name="btInput4" Content="4" HorizontalAlignment="Left" Margin="26,288,0,0" VerticalAlignment="Top" Width="24" Height="24" Background="Gray" FontSize="10"/>
-        <Button x:Name="btInput3" HorizontalAlignment="Left" Margin="26,258,0,0" VerticalAlignment="Top" Width="24" Height="24" Background="Gray" Content="3" FontSize="10"/>
-        <Button x:Name="btInput2" HorizontalAlignment="Left" Margin="26,228,0,0" VerticalAlignment="Top" Width="24" Height="24" Background="Gray" Content="2" FontSize="10"/>
-        <Button x:Name="btInput1" HorizontalAlignment="Left" Margin="26,198,0,0" VerticalAlignment="Top" Width="24" Height="24" Background="Gray" Content="1" FontSize="10"/>
-        <Button x:Name="btOutput1" HorizontalAlignment="Left" Margin="587,318,0,0" VerticalAlignment="Top" Width="24" Height="24" Background="Gray" Content="1" FontSize="10" IsEnabled="False"/>
-        <Button x:Name="btOutput2" Content="2" HorizontalAlignment="Left" Margin="587,288,0,0" VerticalAlignment="Top" Width="24" Height="24" Background="Gray" FontSize="10" IsEnabled="False"/>
-        <Button x:Name="btOutput3" HorizontalAlignment="Left" Margin="587,258,0,0" VerticalAlignment="Top" Width="24" Height="24" Background="Gray" Content="3" FontSize="10" IsEnabled="False"/>
-        <Button x:Name="btOutput4" HorizontalAlignment="Left" Margin="587,228,0,0" VerticalAlignment="Top" Width="24" Height="24" Background="Gray" Content="4" FontSize="10" IsEnabled="False"/>
-        <Button x:Name="btOutput5" HorizontalAlignment="Left" Margin="587,198,0,0" VerticalAlignment="Top" Width="24" Height="24" Background="Gray" FontSize="10" Content="5" IsEnabled="False"/>
-        <Button x:Name="btOutput6" HorizontalAlignment="Left" Margin="587,168,0,0" VerticalAlignment="Top" Width="24" Height="24" Background="Gray" Content="6" FontSize="10" IsEnabled="False"/>
-        <Button x:Name="btOutput7" Content="7" HorizontalAlignment="Left" Margin="587,138,0,0" VerticalAlignment="Top" Width="24" Height="24" Background="Gray" FontSize="10" IsEnabled="False"/>
-        <Button x:Name="btOutput8" HorizontalAlignment="Left" Margin="587,108,0,0" VerticalAlignment="Top" Width="24" Height="24" Background="Gray" Content="8" FontSize="10" IsEnabled="False"/>
-        <Button x:Name="btAnalogOut1" HorizontalAlignment="Left" Margin="587,55,0,0" VerticalAlignment="Top" Width="24" Height="24" Background="White" BorderBrush="Gray" IsEnabled="False"/>
-        <Button x:Name="btAnalogOut2" HorizontalAlignment="Left" Margin="587,21,0,0" VerticalAlignment="Top" Width="24" Height="24" Background="White" BorderBrush="Gray" IsEnabled="False"/>
-        <TextBox x:Name="TBCounter1" HorizontalAlignment="Left" Margin="98,198,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" FontSize="14" Width="45"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="101,175,0,0" TextWrapping="Wrap" Text="Counter 1" VerticalAlignment="Top" FontSize="14"/>
-        <TextBox x:Name="TBCounter2" HorizontalAlignment="Left" Margin="98,264,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" FontSize="14" Width="45"/>
-        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="101,241,0,0" TextWrapping="Wrap" Text="Counter 2" VerticalAlignment="Top" FontSize="14"/>
-        <Button x:Name="btResetCounter1" Content="X" HorizontalAlignment="Left" Margin="162,198,0,0" VerticalAlignment="Top" IsEnabled="False"/>
-        <Button x:Name="btResetCounter2" Content="X" HorizontalAlignment="Left" Margin="162,264,0,0" VerticalAlignment="Top" IsEnabled="False"/>
-        <Slider x:Name="sliderAnalog2" HorizontalAlignment="Left" Margin="459,15,0,0" VerticalAlignment="Top" Width="100" Height="39" Maximum="255" Foreground="Red" IsEnabled="False"/>
-        <Slider x:Name="sliderAnalog1" HorizontalAlignment="Left" Margin="459,47,0,0" VerticalAlignment="Top" Width="100" Height="39" Maximum="255" Foreground="#FFD70000" IsEnabled="False"/>
-        <ProgressBar x:Name="pgb1" HorizontalAlignment="Left" Height="22" Margin="26,108,0,0" VerticalAlignment="Top" Width="165" Maximum="255" Background="#33000000" Foreground="Red"/>
-        <ProgressBar x:Name="pgb2" HorizontalAlignment="Left" Height="22" Margin="26,140,0,0" VerticalAlignment="Top" Width="165" Maximum="255" Foreground="Red"/>
-        <ComboBox x:Name="cbAdresse" HorizontalAlignment="Left" Margin="177,26,0,0" VerticalAlignment="Top" Width="68">
+        <Button x:Name="btWriteAllDigital" Content="+All" HorizontalAlignment="Left" Margin="629,148,0,0" VerticalAlignment="Top" FontSize="10" Height="24" IsEnabled="False"/>
+        <Button x:Name="btClearAllDigital" Content="-All" HorizontalAlignment="Left" Margin="679,148,0,0" VerticalAlignment="Top" Height="24" FontSize="10" IsEnabled="False"/>
+        <Button x:Name="btconnect" Content="Connect" HorizontalAlignment="Left" Margin="30,46,0,0" VerticalAlignment="Top" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False"/>
+        <Button x:Name="btInput5" HorizontalAlignment="Left" Margin="30,402,0,0" VerticalAlignment="Top" Width="24" Height="24" Background="Gray" Content="5" FontSize="10"/>
+        <Button x:Name="btInput4" Content="4" HorizontalAlignment="Left" Margin="30,356,0,0" VerticalAlignment="Top" Width="24" Height="24" Background="Gray" FontSize="10"/>
+        <Button x:Name="btInput3" HorizontalAlignment="Left" Margin="30,310,0,0" VerticalAlignment="Top" Width="24" Height="24" Background="Gray" Content="3" FontSize="10"/>
+        <Button x:Name="btInput2" HorizontalAlignment="Left" Margin="30,264,0,0" VerticalAlignment="Top" Width="24" Height="24" Background="Gray" Content="2" FontSize="10"/>
+        <Button x:Name="btInput1" HorizontalAlignment="Left" Margin="30,218,0,0" VerticalAlignment="Top" Width="24" Height="24" Background="Gray" Content="1" FontSize="10"/>
+        <Button x:Name="btOutput1" HorizontalAlignment="Left" Margin="739,414,0,0" VerticalAlignment="Top" Width="24" Height="24" Background="Gray" Content="1" FontSize="10" IsEnabled="False"/>
+        <Button x:Name="btOutput2" Content="2" HorizontalAlignment="Left" Margin="739,376,0,0" VerticalAlignment="Top" Width="24" Height="24" Background="Gray" FontSize="10" IsEnabled="False"/>
+        <Button x:Name="btOutput3" HorizontalAlignment="Left" Margin="739,338,0,0" VerticalAlignment="Top" Width="24" Height="24" Background="Gray" Content="3" FontSize="10" IsEnabled="False"/>
+        <Button x:Name="btOutput4" HorizontalAlignment="Left" Margin="739,300,0,0" VerticalAlignment="Top" Width="24" Height="24" Background="Gray" Content="4" FontSize="10" IsEnabled="False"/>
+        <Button x:Name="btOutput5" HorizontalAlignment="Left" Margin="739,262,0,0" VerticalAlignment="Top" Width="24" Height="24" Background="Gray" FontSize="10" Content="5" IsEnabled="False"/>
+        <Button x:Name="btOutput6" HorizontalAlignment="Left" Margin="739,224,0,0" VerticalAlignment="Top" Width="24" Height="24" Background="Gray" Content="6" FontSize="10" IsEnabled="False"/>
+        <Button x:Name="btOutput7" Content="7" HorizontalAlignment="Left" Margin="739,186,0,0" VerticalAlignment="Top" Width="24" Height="24" Background="Gray" FontSize="10" IsEnabled="False"/>
+        <Button x:Name="btOutput8" HorizontalAlignment="Left" Margin="739,148,0,0" VerticalAlignment="Top" Width="24" Height="24" Background="Gray" Content="8" FontSize="10" IsEnabled="False"/>
+        <Button x:Name="btAnalogOut1" HorizontalAlignment="Left" Margin="739,83,0,0" VerticalAlignment="Top" Width="24" Height="24" Background="White" BorderBrush="Black" IsEnabled="False"/>
+        <Button x:Name="btAnalogOut2" HorizontalAlignment="Left" Margin="739,41,0,0" VerticalAlignment="Top" Width="24" Height="24" Background="White" BorderBrush="Black" IsEnabled="False"/>
+        <TextBox x:Name="TBCounter1" HorizontalAlignment="Left" Margin="102,242,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" FontSize="14" Width="45"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="105,219,0,0" TextWrapping="Wrap" Text="Counter 1" VerticalAlignment="Top" FontSize="14"/>
+        <TextBox x:Name="TBCounter2" HorizontalAlignment="Left" Margin="102,308,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" FontSize="14" Width="45"/>
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Margin="105,285,0,0" TextWrapping="Wrap" Text="Counter 2" VerticalAlignment="Top" FontSize="14"/>
+        <Button x:Name="btResetCounter1" Content="X" HorizontalAlignment="Left" Margin="166,242,0,0" VerticalAlignment="Top" IsEnabled="False"/>
+        <Button x:Name="btResetCounter2" Content="X" HorizontalAlignment="Left" Margin="166,308,0,0" VerticalAlignment="Top" IsEnabled="False"/>
+        <Slider x:Name="sliderAnalog2" HorizontalAlignment="Left" Margin="511,35,0,0" VerticalAlignment="Top" Width="200" Height="39" Maximum="255" Foreground="Red" IsEnabled="False"/>
+        <Slider x:Name="sliderAnalog1" HorizontalAlignment="Left" Margin="511,75,0,0" VerticalAlignment="Top" Width="200" Height="39" Maximum="255" Foreground="#FFD70000" IsEnabled="False"/>
+        <ProgressBar x:Name="pgb1" HorizontalAlignment="Left" Height="22" Margin="30,132,0,0" VerticalAlignment="Top" Width="165" Maximum="255" Background="#33000000" Foreground="Red"/>
+        <ProgressBar x:Name="pgb2" HorizontalAlignment="Left" Height="22" Margin="30,168,0,0" VerticalAlignment="Top" Width="165" Maximum="255" Foreground="Red"/>
+        <ComboBox x:Name="cbAdresse" HorizontalAlignment="Left" Margin="181,46,0,0" VerticalAlignment="Top" Width="68">
             <ComboBoxItem Content="0" IsSelected="True"/>
             <ComboBoxItem Content="1"/>
             <ComboBoxItem Content="2"/>
             <ComboBoxItem Content="3"/>
         </ComboBox>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="109,32,0,0" TextWrapping="Wrap" Text="Address :" VerticalAlignment="Top" Height="31" Width="82" RenderTransformOrigin="0.5,0.5"/>
-        <Button x:Name="btQuit" Content="Quitter" HorizontalAlignment="Left" Margin="26,64,0,0" VerticalAlignment="Top" Width="75"/>
-        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="246,168,0,0" TextWrapping="Wrap" Text="RaspK8055" VerticalAlignment="Top" Height="54" Width="212" FontSize="36" FontFamily="Segoe UI Black" FontWeight="Bold"/>
-        <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Margin="340,155,0,0" TextWrapping="Wrap" Text="Raspberry Pi" VerticalAlignment="Top" Foreground="Red" FontWeight="Bold"/>
-        <TextBlock x:Name="textBlock5" HorizontalAlignment="Left" Margin="321,200,0,0" TextWrapping="Wrap" Text="Windows 10 IOT" VerticalAlignment="Top" FontWeight="Bold" Foreground="#FF4570E4" FontSize="14"/>
-        <TextBlock x:Name="tbDebug" HorizontalAlignment="Left" Margin="221,227,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="115" Width="338" FontSize="8" ScrollViewer.HorizontalScrollBarVisibility="Visible"/>
-        <Button x:Name="btTest" Content="Close" HorizontalAlignment="Left" Margin="284,26,0,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="113,52,0,0" TextWrapping="Wrap" Text="Address :" VerticalAlignment="Top" Height="31" Width="82" RenderTransformOrigin="0.5,0.5"/>
+        <Button x:Name="btQuit" Content="Quitter" HorizontalAlignment="Left" Margin="30,84,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="250,188,0,0" TextWrapping="Wrap" Text="RaspK8055" VerticalAlignment="Top" Height="54" Width="212" FontSize="36" FontFamily="Segoe UI Black" FontWeight="Bold"/>
+        <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Margin="344,175,0,0" TextWrapping="Wrap" Text="Raspberry Pi" VerticalAlignment="Top" Foreground="Red" FontWeight="Bold"/>
+        <TextBlock x:Name="textBlock5" HorizontalAlignment="Left" Margin="325,220,0,0" TextWrapping="Wrap" Text="Windows 10 IOT" VerticalAlignment="Top" FontWeight="Bold" Foreground="#FF4570E4" FontSize="14"/>
+        <TextBlock x:Name="tbDebug" HorizontalAlignment="Left" Margin="226,247,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="215" Width="461" FontSize="8" ScrollViewer.HorizontalScrollBarVisibility="Visible"/>
+        <Button x:Name="btTest" Content="Test" HorizontalAlignment="Left" Margin="288,46,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>

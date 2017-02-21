@@ -14,14 +14,27 @@ Public NotInheritable Class MainPage
     Private _DIGITAL_OUTPUT() As Boolean = New Boolean() {False, False, False, False, False, False, False, False, False}
     Private dispatcherTimer As DispatcherTimer
     Private dttest As DispatcherTimer
+    Private _TEST_RTN As Boolean = False
 
     Public Sub New()
         ' This call is required by the designer.
         InitializeComponent()
         ' Add any initialization after the InitializeComponent() call.
-
+        dttest = New DispatcherTimer
+        AddHandler dttest.Tick, AddressOf dttest_Tick
+        dttest.Interval = New TimeSpan(0, 0, 1)
+        dttest.Stop()
     End Sub
 
+    Private Sub btconnect_Click(sender As Object, e As RoutedEventArgs) Handles btconnect.Click
+        raspk8055.raspk8055.openK8055(cbAdresse.SelectedIndex)
+        dispatcherTimer = New DispatcherTimer
+        AddHandler dispatcherTimer.Tick, AddressOf dispatcherTimer_Tick
+        dispatcherTimer.Interval = New TimeSpan(0, 0, 0.2)
+        dispatcherTimer.Start()
+    End Sub
+
+#Region "Send method"
     Public Sub btWriteAllDigital_Click(sender As Object, e As RoutedEventArgs) Handles btWriteAllDigital.Click
         writeAllDigital()
     End Sub
@@ -69,40 +82,63 @@ Public NotInheritable Class MainPage
     Private Sub clearDigitalChannel(ByVal channel As Integer)
         _DIGITAL_OUTPUT(channel) = False
         raspk8055.raspk8055.clearDigitalChannel(channel)
+        Select Case channel
+            Case 1
+                btOutput1.Background = New SolidColorBrush(Windows.UI.Colors.Gray)
+            Case 2
+                btOutput2.Background = New SolidColorBrush(Windows.UI.Colors.Gray)
+            Case 3
+                btOutput3.Background = New SolidColorBrush(Windows.UI.Colors.Gray)
+            Case 4
+                btOutput4.Background = New SolidColorBrush(Windows.UI.Colors.Gray)
+            Case 5
+                btOutput5.Background = New SolidColorBrush(Windows.UI.Colors.Gray)
+            Case 6
+                btOutput6.Background = New SolidColorBrush(Windows.UI.Colors.Gray)
+            Case 7
+                btOutput7.Background = New SolidColorBrush(Windows.UI.Colors.Gray)
+            Case 8
+                btOutput8.Background = New SolidColorBrush(Windows.UI.Colors.Gray)
+        End Select
     End Sub
 
     Private Sub writeDigitalChannel(ByVal channel As Integer)
         _DIGITAL_OUTPUT(channel) = True
         raspk8055.raspk8055.writeDigitalChannel(channel)
+        Select Case channel
+            Case 1
+                btOutput1.Background = New SolidColorBrush(Windows.UI.Colors.Red)
+            Case 2
+                btOutput2.Background = New SolidColorBrush(Windows.UI.Colors.Red)
+            Case 3
+                btOutput3.Background = New SolidColorBrush(Windows.UI.Colors.Red)
+            Case 4
+                btOutput4.Background = New SolidColorBrush(Windows.UI.Colors.Red)
+            Case 5
+                btOutput5.Background = New SolidColorBrush(Windows.UI.Colors.Red)
+            Case 6
+                btOutput6.Background = New SolidColorBrush(Windows.UI.Colors.Red)
+            Case 7
+                btOutput7.Background = New SolidColorBrush(Windows.UI.Colors.Red)
+            Case 8
+                btOutput8.Background = New SolidColorBrush(Windows.UI.Colors.Red)
+        End Select
     End Sub
+
+    Private Sub setAnalogChannelTo(ByVal channel As Integer, ByVal _VALUE As Integer)
+        Select Case channel
+            Case 1
+                btAnalogOut1.Background = New SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 255 - _VALUE, 255 - _VALUE))
+            Case 2
+                btAnalogOut2.Background = New SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 255 - _VALUE, 255 - _VALUE))
+        End Select
+        raspk8055.raspk8055.writeAnalogChannel(channel, _VALUE)
+    End Sub
+
+#End Region
 
     Public Sub btClearAllDigital_Click(sender As Object, e As RoutedEventArgs) Handles btClearAllDigital.Click
         clearAllDigital()
-    End Sub
-
-    Private Sub btconnect_Click(sender As Object, e As RoutedEventArgs) Handles btconnect.Click
-        'If Not raspk8055.raspk8055.isK8055Open Then
-        'If cbAdresse.SelectedIndex = 0 Then raspk8055.raspk8055.openDevice_0()
-        'If cbAdresse.SelectedIndex = 1 Then raspk8055.raspk8055.openDevice_1()
-        'If cbAdresse.SelectedIndex = 2 Then raspk8055.raspk8055.openDevice_2()
-        'If cbAdresse.SelectedIndex = 3 Then raspk8055.raspk8055.openDevice_3()
-        raspk8055.raspk8055.openK8055(cbAdresse.SelectedIndex)
-        'tbDebug.Text = tbDebug.Text & vbCrLf & "Device info:" & raspk8055.raspk8055.getDeviceInfo()
-        'tbDebug.Text = tbDebug.Text & vbCrLf & "Error:" & raspk8055.raspk8055.getError
-        'lblProductId.Text = cbAdresse.SelectedIndex.ToString
-        dispatcherTimer = New DispatcherTimer
-            AddHandler dispatcherTimer.Tick, AddressOf dispatcherTimer_Tick
-            dispatcherTimer.Interval = New TimeSpan(0, 0, 0.5)
-            dispatcherTimer.Start()
-        'If raspk8055.raspk8055.isK8055Open Then
-        '    btconnect.Background = New SolidColorBrush(Windows.UI.Colors.Green)
-        'Else
-        '    btconnect.Background = New SolidColorBrush(Windows.UI.Colors.Red)
-        'End If
-        'Else
-        'btconnect.Background = New SolidColorBrush(Windows.UI.Colors.Green)
-        'Debug.WriteLine("K8055 already open")
-        'End If
     End Sub
 
     Public Sub dispatcherTimer_Tick(sender As Object, e As EventArgs)
@@ -243,10 +279,6 @@ Public NotInheritable Class MainPage
         End If
     End Sub
 
-    Private Sub setAnalogChannelTo(ByVal channel As Integer, ByVal _VALUE As Integer)
-        raspk8055.raspk8055.writeAnalogChannel(channel, _VALUE)
-    End Sub
-
     Private Sub btAnalogOut1_Click(sender As Object, e As RoutedEventArgs) Handles btAnalogOut1.Click
         setAnalogChannelTo(1, 0)
         sliderAnalog1.Value = 0
@@ -259,17 +291,11 @@ Public NotInheritable Class MainPage
     End Sub
 
     Private Sub sliderAnalog1_ValueChanged(sender As Object, e As RangeBaseValueChangedEventArgs) Handles sliderAnalog1.ValueChanged
-        Dim outputVoltage As Integer = 0
-        outputVoltage = sliderAnalog1.Value
-        setAnalogChannelTo(1, outputVoltage)
-        btAnalogOut1.Background = New SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 255 - outputVoltage, 255 - outputVoltage))
+        setAnalogChannelTo(1, sliderAnalog1.Value)
     End Sub
 
     Private Sub sliderAnalog2_ValueChanged(sender As Object, e As RangeBaseValueChangedEventArgs) Handles sliderAnalog2.ValueChanged
-        Dim outputVoltage As Integer = 0
-        outputVoltage = sliderAnalog2.Value
-        setAnalogChannelTo(2, outputVoltage)
-        btAnalogOut2.Background = New SolidColorBrush(Windows.UI.Color.FromArgb(255, 255, 255 - outputVoltage, 255 - outputVoltage))
+        setAnalogChannelTo(2, sliderAnalog2.Value)
     End Sub
 
     Private Sub btQuit_Click(sender As Object, e As RoutedEventArgs) Handles btQuit.Click
@@ -295,21 +321,37 @@ Public NotInheritable Class MainPage
         btResetCounter1.IsEnabled = truefalse
         btResetCounter2.IsEnabled = truefalse
     End Sub
+#Region "Test K8055"
+
+    Private _TEST_RTN_STEP As Integer = 0
 
     Private Sub btTest_Click(sender As Object, e As RoutedEventArgs) Handles btTest.Click
-        raspk8055.raspk8055.closeDevice()
-        'Dim _K8055_STATUS() As String = raspk8055.raspk8055.getWatcherStatus
-        'Debug.WriteLine("----------------------------------------------")
-        'Debug.WriteLine(_K8055_STATUS(0) & " I " & _K8055_STATUS(1) & " I " & _K8055_STATUS(2) & " I " & _K8055_STATUS(3) & " I " & _K8055_STATUS(4))
-        'dttest = New DispatcherTimer
-        'AddHandler dttest.Tick, AddressOf dttest_Tick
-        'dttest.Interval = New TimeSpan(0, 0, 1)
-        'dttest.Start()
+        If _TEST_RTN Then
+            dttest.Stop()
+            _TEST_RTN = False
+        Else
+            _TEST_RTN_STEP = 0
+            dttest.Start()
+            _TEST_RTN = True
+        End If
     End Sub
 
     Public Sub dttest_Tick(sender As Object, e As EventArgs)
-        'Dim _K8055_STATUS() As String = raspk8055.raspk8055.getWatcherStatus
-        'Debug.WriteLine("----------------------------------------------")
-        'Debug.WriteLine(_K8055_STATUS(0) & " I " & _K8055_STATUS(1) & " I " & _K8055_STATUS(2) & " I " & _K8055_STATUS(3) & " I " & _K8055_STATUS(4))
+        Select Case _TEST_RTN_STEP
+            Case 0
+                clearAllDigital()
+                setAnalogChannelTo(1, 0)
+                setAnalogChannelTo(2, 0)
+            Case 1 To 8
+                writeDigitalChannel(_TEST_RTN_STEP)
+            Case 9 To 10
+                setAnalogChannelTo(_TEST_RTN_STEP - 8, 255)
+            Case Else
+                _TEST_RTN_STEP = 0
+                Exit Sub
+        End Select
+        _TEST_RTN_STEP += 1
     End Sub
+
+#End Region
 End Class

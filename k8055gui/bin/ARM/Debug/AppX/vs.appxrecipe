@@ -10,7 +10,7 @@
     <PackageArchitecture>arm</PackageArchitecture>
     <PackageIdentityName>cc39c4b8-1bae-4445-8a22-a9c743f0a62e</PackageIdentityName>
     <PackageIdentityPublisher>CN=leblicq</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\leblicq\documents\visual studio 2015\Projects\k8055gui\k8055gui\obj\ARM\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\leblicq\ownCloud\Projets\k8055gui\k8055gui\obj\ARM\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -25,16 +25,16 @@
     <JitOptimizationSuppressed>False</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\leblicq\documents\visual studio 2015\Projects\k8055gui\k8055gui\bin\ARM\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\leblicq\ownCloud\Projets\k8055gui\k8055gui\bin\ARM\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-02-15T13:56:40.716</Modified>
+      <Modified>2017-02-21T14:34:08.410</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\leblicq\documents\visual studio 2015\Projects\k8055gui\k8055gui\bin\ARM\Debug\k8055gui.exe">
+    <AppxPackagedFile Include="C:\Users\leblicq\ownCloud\Projets\k8055gui\k8055gui\bin\ARM\Debug\k8055gui.exe">
       <PackagePath>entrypoint\k8055gui.exe</PackagePath>
-      <Modified>2017-02-15T13:56:40.061</Modified>
+      <Modified>2017-02-21T14:34:06.770</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\leblicq\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -448,64 +448,64 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2015-07-22T21:11:12.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\leblicq\documents\visual studio 2015\Projects\raspk8055\raspk8055\bin\ARM\Release\raspk8055.dll">
+    <AppxPackagedFile Include="C:\Users\leblicq\ownCloud\Projets\raspk8055\raspk8055\bin\ARM\Release\raspk8055.dll">
       <PackagePath>raspk8055.dll</PackagePath>
-      <Modified>2017-02-15T13:56:23.472</Modified>
+      <Modified>2017-02-21T14:30:47.238</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\leblicq\documents\visual studio 2015\Projects\k8055gui\k8055gui\My Project\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\leblicq\ownCloud\Projets\k8055gui\k8055gui\My Project\Default.rd.xml">
       <PackagePath>My Project\Default.rd.xml</PackagePath>
       <Modified>2017-01-29T20:46:48.713</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\leblicq\documents\visual studio 2015\Projects\k8055gui\k8055gui\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\leblicq\ownCloud\Projets\k8055gui\k8055gui\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
       <Modified>2015-09-20T16:30:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\leblicq\documents\visual studio 2015\Projects\k8055gui\k8055gui\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\leblicq\ownCloud\Projets\k8055gui\k8055gui\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-09-20T16:30:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\leblicq\documents\visual studio 2015\Projects\k8055gui\k8055gui\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\leblicq\ownCloud\Projets\k8055gui\k8055gui\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-09-20T16:30:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\leblicq\documents\visual studio 2015\Projects\k8055gui\k8055gui\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\leblicq\ownCloud\Projets\k8055gui\k8055gui\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-09-20T16:30:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\leblicq\documents\visual studio 2015\Projects\k8055gui\k8055gui\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\leblicq\ownCloud\Projets\k8055gui\k8055gui\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-09-20T16:30:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\leblicq\documents\visual studio 2015\Projects\k8055gui\k8055gui\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\leblicq\ownCloud\Projets\k8055gui\k8055gui\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-09-20T16:30:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\leblicq\documents\visual studio 2015\Projects\k8055gui\k8055gui\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\leblicq\ownCloud\Projets\k8055gui\k8055gui\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-09-20T16:30:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\leblicq\documents\visual studio 2015\Projects\k8055gui\k8055gui\bin\ARM\Debug\k8055gui.xr.xml">
+    <AppxPackagedFile Include="C:\Users\leblicq\ownCloud\Projets\k8055gui\k8055gui\bin\ARM\Debug\k8055gui.xr.xml">
       <PackagePath>k8055gui.xr.xml</PackagePath>
-      <Modified>2017-02-15T10:24:16.110</Modified>
+      <Modified>2017-02-20T14:37:28.108</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2017-01-27T14:33:14.138</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\leblicq\documents\visual studio 2015\Projects\k8055gui\k8055gui\bin\ARM\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\leblicq\ownCloud\Projets\k8055gui\k8055gui\bin\ARM\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-02-15T13:53:44.002</Modified>
+      <Modified>2017-02-21T14:34:08.020</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\leblicq\documents\visual studio 2015\Projects\k8055gui\k8055gui\bin\ARM\Debug\Core\k8055gui.exe">
+    <AppxPackagedFile Include="C:\Users\leblicq\ownCloud\Projets\k8055gui\k8055gui\bin\ARM\Debug\Core\k8055gui.exe">
       <PackagePath>k8055gui.exe</PackagePath>
-      <Modified>2017-02-15T13:56:40.704</Modified>
+      <Modified>2017-02-21T14:34:08.410</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
